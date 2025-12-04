@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Employee schedule management system">
+    <title>FreeSchedule</title>
+    <link rel="icon" type="image/svg" sizes="32x32" href="images/FS.svg">
+</head>
+<body>
+
+    <header>
+        <h1>FreeSchedule</h1>
+        <div class="user-controls">
+            <select name="language" id="language-select">
+                <option value="en">English</option>
+                <option value="ua">Ukrainian</option>
+            </select>
+            
+            <div class="profile">
+                <img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80">
+                <div>
+                    <div>Andy's Makeover</div>
+                    <div>ID: 1234567</div>
+                    <div>role: employee</div>
+                </div>
+                
+                <details class="user-menu">
+                    <summary aria-label="User menu">
+                    </summary>
+                    <div class="menu-content">
+                        <a href="/logout">Logout</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <aside class="side">
+            <footer>
+                <nav>
+                    <ul>
+                        <li><a href="requirements.html">Requirements</a></li>
+                        <li><a href="about.html" class="link">About us</a></li>
+                        <li><a href="faq.html" class="link">FAQ</a></li>
+                        <li><a href="contacts.html" class="link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </aside>
+
+        <section class="schedule-grid">
+            <h2 hidden>Schedule Table</h2>
+
+            <div class="date-nav">
+                <button type="button" aria-label="Previous Week"><img src="images/left.svg" alt="left" loading="lazy"></button>
+                <span>NOV 1 - NOV 7 2025</span>
+                <button type="button" aria-label="Next Week"><img src="images/right.svg" alt="right" loading="lazy"></button>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Employee</th>
+                        <th scope="col">
+                            <p>Monday</p>
+                            <p>Nov 1</p>
+
+                        </th>
+                        <th scope="col">
+                            <p>Tuesday</p>
+                            <p>Nov 2</p>
+
+                        </th>
+                        <th scope="col">
+                            <p>Wednesday</p>
+                            <p>Nov 3</p>
+
+                        </th>
+                        <th scope="col">
+                            <p>Thursday</p>
+                            <p>Nov 4</p>
+
+                        </th>
+                        <th scope="col">
+                            <p>Friday</p>
+                            <p>Nov 5</p>
+
+                        </th>
+                        <th class="weekend" scope="col">
+                            <p>Saturday</p>
+                            <p>Nov 6</p>
+
+                        </th>
+                        <th class="weekend" scope="col">
+                            <p>Sunday</p>
+                            <p>Nov 7</p>
+
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <form action="/download-schedule" class="gen-btn" method="POST" target="_blank"> 
+                <button type="submit"> 
+                    Download PDF
+                </button>
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

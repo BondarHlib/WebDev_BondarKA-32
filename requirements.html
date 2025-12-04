@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Employee schedule management system">
+    <title>FreeSchedule</title>
+    <link rel="icon" type="image/svg" sizes="32x32" href="images/FS.svg">
+</head>
+<body>
+
+    <header>
+        <h1>FreeSchedule</h1>
+        <div class="user-controls">
+            <select name="language" id="language-select">
+                <option value="en">English</option>
+                <option value="ua">Ukrainian</option>
+            </select>
+            
+            <div class="profile">
+                <img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80">
+                <div>
+                    <div>Andy's Makeover</div>
+                    <div>ID: 1234567</div>
+                    <div>role: employee</div>
+                </div>
+                
+                <details class="user-menu">
+                    <summary aria-label="User menu">
+                    </summary>
+                    <div class="menu-content">
+                        <a href="/logout">Logout</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <aside class="side">
+            <footer>
+                <nav>
+                    <ul>
+                        <li><a href="myschedule.html">My Schedule</a></li>
+                        <li><a href="about.html" class="link">About us</a></li>
+                        <li><a href="faq.html" class="link">FAQ</a></li>
+                        <li><a href="contacts.html" class="link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </aside>
+
+        <section class="wishes-container">
+            <h2>Weekly Preferences</h2>
+            
+            <form action="/submit-wishes" method="POST" class="wishes-form">
+                
+                <div class="form-group">
+                    <label for="week-select">Select Week:</label>
+                    <input type="week" id="week-select" name="week" required>
+                </div>
+
+
+                <div class="days-preferences">
+                    <fieldset class="day-item">
+                        <legend>Monday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="mon_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="mon_start"></label>
+                                <label>To: <input type="time" name="mon_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="day-item">
+                        <legend>Tuesday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="tue_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="tue_start"></label>
+                                <label>To: <input type="time" name="tue_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset class="day-item">
+                        <legend>Wednesday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="wed_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="wed_start"></label>
+                                <label>To: <input type="time" name="wed_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset class="day-item">
+                        <legend>Thursday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="thu_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="thu_start"></label>
+                                <label>To: <input type="time" name="thu_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="day-item">
+                        <legend>Friday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="fri_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="fri_start"></label>
+                                <label>To: <input type="time" name="fri_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset class="day-item">
+                        <legend>Saturday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="sat_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="sat_start"></label>
+                                <label>To: <input type="time" name="sat_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="day-item">
+                        <legend>Sunday</legend>
+                        <div class="day-controls">
+                            <label>
+                                <input type="checkbox" name="sun_off" value="true">
+                                Day Off
+                            </label>
+                            <div class="time-range">
+                                <label>From: <input type="time" name="sun_start"></label>
+                                <label>To: <input type="time" name="sun_end"></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Any specific requests?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Submit Wishes
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>
