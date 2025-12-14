@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-main: 'Montserrat', sans-serif;
+    
+    --bg-main: #FFFFFF; 
+    
+    --bg-sidebar: #FCFCFC; 
+
+    --text-main: #484A4F;
+    --text-light: #BDBDBD;
+    
+    --color-accent: #484A4F;
+    --color-accent-hover: #27282B;
+
+    --color-link: #2980b9;
+
+    --schedule-weekday-bg: #D4E3EB;
+    --schedule-weekend-bg: #FDCECE;
+
+    --sidebar-width: 260px;
+    --header-height: 80px;
+    --border-radius: 8px;
+    --spacing-unit: 16px;
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}

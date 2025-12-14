@@ -1,0 +1,131 @@
+
+.auth-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+    background-color: var(--bg-main);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    
+    background-color: #fff;
+    padding: 40px;
+    
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+}
+
+.auth-container h2 {
+    font-family: var(--font-main);
+    font-size: 32px;
+    font-weight: 700;
+    color: #484A4F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 600;
+    color: #484A4F;
+    margin-bottom: 8px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form select {
+    width: 100%;
+    padding: 12px 16px;
+    
+    font-family: var(--font-main);
+    font-size: 16px;
+    color: #484A4F;
+    
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    background-color: #FAFAFA;
+    transition: all 0.2s;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+    border-color: #484A4F;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(72, 74, 79, 0.1);
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #484A4F;
+    cursor: pointer;
+}
+
+.auth-form .submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    
+    background-color: #484A4F;
+    color: #fff;
+    
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 600;
+    
+    padding: 14px;
+    border-radius: 50px;
+    
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.auth-form .submit-btn:hover {
+    background-color: #36373b;
+    transform: translateY(-2px);
+}
+
+.auth-form .submit-btn:active {
+    transform: translateY(0);
+}
+
+.auth-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-family: var(--font-main);
+    font-size: 14px;
+    color: #828282;
+}
+
+.auth-footer a {
+    color: #484A4F;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+}
+
+.auth-footer a:hover {
+    text-decoration-color: #484A4F;
+}

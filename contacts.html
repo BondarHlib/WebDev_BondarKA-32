@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contacts with site owners">
+    <link rel="stylesheet" href="css/style.css">
     <title>FreeSchedule</title>
-        <link rel="icon" type="image/svg" sizes="32x32" href="images/FS.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="images/FS.svg">
 </head>
 <body>
 
     <header>
+        <button class="burger-btn" aria-label="Toggle menu" style="display: none; margin-right: 15px;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#484A4F" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
         <h1>FreeSchedule</h1>
         <div class="user-controls">
             <select name="language" id="language-select">
@@ -22,6 +30,8 @@
                 <div>
                     <div>Andy's Makeover</div>
                     <div>ID: 1234567</div>
+                    <div class="only-employee">role: employee</div>
+                    <div class="only-manager">role: manager</div>
                 </div>
                 
                 <details class="user-menu">
@@ -58,13 +68,13 @@
                 <h3>Phone numbers</h3>
                 <ul>
                     <li>
-                        <a href="tel:+380970002603">(097) 000-26-03</a>
+                        <p><a href="tel:+380970002603">(097) 000-26-03</a></p>
                     </li>
                     <li>
-                        <a href="tel:+380955050020">(095) 505-00-20</a>
+                        <p><a class="tel" href="tel:+380955050020">(095) 505-00-20</a></p>
                     </li>
                     <li>
-                        <a href="tel:+380630059001">(063) 005-90-01</a>
+                        <p><a class="tel" href="tel:+380630059001">(063) 005-90-01</a></p>
                     </li>
                 </ul>
             </div>
@@ -86,6 +96,15 @@
         </section>
 
     </main>
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const sidebar = document.querySelector('aside');
 
+        if (burgerBtn && sidebar) {
+            burgerBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>

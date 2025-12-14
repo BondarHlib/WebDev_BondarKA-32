@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Employee schedule management system">
+    <link rel="stylesheet" href="css/style.css">
     <title>FreeSchedule</title>
     <link rel="icon" type="image/svg" sizes="32x32" href="images/FS.svg">
 </head>
 <body>
 
     <header>
+        <button class="burger-btn" aria-label="Toggle menu" style="display: none; margin-right: 15px;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#484A4F" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
         <h1>FreeSchedule</h1>
         <div class="user-controls">
             <select name="language" id="language-select">
@@ -18,11 +27,12 @@
             </select>
             
             <div class="profile">
-                <img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80">
+                <img src="images/avatar.svg" alt="User Avatar" loading="lazy">
                 <div>
                     <div>Andy's Makeover</div>
                     <div>ID: 1234567</div>
-                    <div>role: manager</div>
+                    <div class="only-employee">role: employee</div>
+                    <div class="only-manager">role: manager</div>
                 </div>
                 
                 <details class="user-menu">
@@ -43,7 +53,7 @@
                 <h2 class="side-name">Groups</h2>
                 <ul>
                     <li class="side-list-element">
-                        <a href="#" class="group-link">Main</a>
+                        <img src="images/group.svg" alt="Group" loading="lazy"><a href="#" class="group-link">Main</a>
                     </li>
                 </ul>
                 
@@ -144,7 +154,27 @@
 
                 <tbody>
                     <tr>
+                        <td><img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80"><span>Novikov A.</span></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80"><span>Novikov A.</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/avatar.svg" alt="User Avatar" loading="lazy" width="80" height="80"><span>Novikov A.</span></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -180,10 +210,22 @@
                     Generate
                 </button>
             </form>
+            
 
         </section>
 
     </main>
 
+    <script>
+    // Простий скрипт для мобільного меню
+    const burgerBtn = document.querySelector('.burger-btn');
+    const sidebar = document.querySelector('aside');
+
+    if (burgerBtn && sidebar) {
+        burgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    }
+    </script>
 </body>
 </html>

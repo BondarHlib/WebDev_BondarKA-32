@@ -1,0 +1,170 @@
+
+.wishes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: var(--font-main);
+    color: #484A4F;
+}
+
+.wishes-form .form-group label {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.wishes-form input[type="week"] {
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #484A4F;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+.days-preferences {
+    border-top: 1px solid #E0E0E0;
+}
+
+.day-item {
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px 0;
+    margin: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.day-item legend {
+    float: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #484A4F;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.day-controls {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.day-controls label:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.day-controls input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #484A4F;
+    cursor: pointer;
+}
+
+.time-range {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.time-range label {
+    font-size: 14px;
+    color: #828282;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-range input[type="time"] {
+    padding: 8px 12px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    color: #484A4F;
+    background: #FAFAFA;
+}
+
+.time-range input[type="time"]:focus {
+    border-color: #484A4F;
+    background: #fff;
+}
+
+.wishes-form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    color: #484A4F;
+    resize: vertical;
+    min-height: 100px;
+    background-color: #FAFAFA;
+}
+
+.wishes-form textarea::placeholder {
+    color: #BDBDBD;
+}
+
+.wishes-form .submit-btn {
+    background-color: #484A4F;
+    color: #fff;
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 600;
+    
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    
+    align-self: flex-end;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.wishes-form .submit-btn:hover {
+    background-color: #36373b;
+    transform: translateY(-2px);
+}
+
+.wishes-form .submit-btn:active {
+    transform: translateY(0);
+}
+
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid,
+select:not(:placeholder-shown):invalid {
+    border-color: #E74C3C;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23E74C3C' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+input:not(:placeholder-shown):valid,
+textarea:not(:placeholder-shown):valid {
+    border-color: #27AE60;
+}
+
+.error-message {
+    color: #E74C3C;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+input:invalid + .error-message {
+    display: block;
+}

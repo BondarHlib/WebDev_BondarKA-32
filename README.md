@@ -1,3 +1,5 @@
 # WebDev_BondarKA-32
 Project of KPI student of group KA-32 Bondar Hlib
 A site for building an optimal work schedule for the next week for a group of employees based on the restrictions they expressed and those imposed by the manager.
+
+The project utilizes a modular CSS architecture to ensure maintainability and scalability, with styles organized into separate logical files that are aggregated into a main style sheet using @import directives. The layout is built primarily using Flexbox for flexible alignment and structure, while the complex schedule grid is handled through specialized table styling. To ensure a seamless user experience across all devices, the design is fully responsive, employing Media Queries within a dedicated file to adapt the interface for mobile and tablet screens, including a collapsible sidebar implementation. Additionally, global consistency in colors, fonts, and spacing is managed efficiently through CSS Variables defined in the root scop

@@ -1,0 +1,51 @@
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--text-main);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--text-main);
+}
+
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+
+a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-link); 
+}
+
+[hidden] {
+    display: none !important;
+}
+
+img {
+    font-style: italic;
+    color: var(--text-light);
+}

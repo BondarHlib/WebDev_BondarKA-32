@@ -1,0 +1,69 @@
+
+@media (max-width: 1024px) {
+    .faq-inf,
+    .contacts-inf,
+    .wishes-container {
+        margin-left: 0;
+        padding: 0 20px 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .main {
+        flex-direction: column;
+    }
+
+
+    aside {
+        position: fixed;
+        left: -100%; 
+        top: 80px; 
+        height: calc(100vh - 80px);
+        width: 100%;
+        transition: left 0.3s ease;
+        box-shadow: none;
+    }
+
+    aside.active {
+        left: 0;
+    }
+
+
+    header {
+        padding: 0 16px;
+        background-color: #fff;
+        z-index: 101;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+
+    .burger-btn {
+        display: block !important;
+    }
+
+
+    .user-controls {
+        gap: 10px;
+    }
+    
+    .schedule-grid {
+        padding-right: 0;
+    }
+    
+
+    .date-nav {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        height: auto;
+        pointer-events: auto;
+    }
+
+    aside footer {
+        position: absolute;
+        bottom: 20px;
+    }
+}
